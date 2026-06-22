@@ -2,6 +2,7 @@ package sistema.frota.viagem;
 
 import jakarta.persistence.*;
 import lombok.*;
+import sistema.frota.cidades.Cidades;
 import sistema.frota.motorista.Motorista;
 import sistema.frota.veiculo.Veiculo;
 
