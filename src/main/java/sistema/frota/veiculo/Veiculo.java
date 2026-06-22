@@ -38,7 +38,7 @@ public class Veiculo {
     private Year ano;
 
     @NonNull
-    private int km_atual;
+    private Integer km_atual;
 
     @NonNull
     @Column(precision = 10, scale = 2)
