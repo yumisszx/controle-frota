@@ -28,6 +28,10 @@ public class Veiculo {
     @NonNull
     private String placa;
 
+    @Enumerated(EnumType.STRING)
+    @NonNull
+    private TipoVeiculo tipo_veiculo;
+
     @NonNull
     private String marca;
 
