@@ -37,6 +37,7 @@ build/
 *.db
 application.properties
 application-dev.properties
+/resources
 
 .env
 .env.*
