@@ -3,7 +3,11 @@ package sistema.frota.cidades;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Table(name = "cidades")
+@Table(name = "cidades", uniqueConstraints = {
+        @UniqueConstraint(
+                columnNames = {"cidade", "estado"}
+        )
+})
 @Entity
 @Getter
 @Setter
