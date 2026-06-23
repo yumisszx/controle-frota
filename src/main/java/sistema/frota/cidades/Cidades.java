@@ -18,13 +18,13 @@ public class Cidades {
     @Id
     @NonNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_cidade;
+    private Integer id_cidade;
 
     @NonNull
     private String cidade;
 
     @NonNull
-    @Column(columnDefinition = "VARCAHR(2)")
+    @Column(columnDefinition = "VARCHAR(2)")
     private String estado;
 
     @NonNull

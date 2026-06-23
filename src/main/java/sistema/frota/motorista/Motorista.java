@@ -14,7 +14,6 @@ import java.time.LocalDate;
 @EqualsAndHashCode(of = "CPF")
 public class Motorista {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NonNull
     @Column(columnDefinition = "VARCHAR(11)", unique = true)
     private String CPF;

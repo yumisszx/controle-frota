@@ -15,7 +15,6 @@ import java.time.Year;
 
 public class Veiculo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "VARCHAR(17)")
     @NonNull
     private String chassi;
@@ -45,6 +44,5 @@ public class Veiculo {
     private Integer km_atual;
 
     @NonNull
-    @Column(precision = 10, scale = 2)
     private double capacidade_carga;
 }

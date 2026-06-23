@@ -23,7 +23,7 @@ public class Manutencao {
 
     @NonNull
     @ManyToOne
-    @JoinColumn(name = "veiculo_chassi")
+    @JoinColumn(name = "veiculo")
     private Veiculo veiculo;
 
     @NonNull
@@ -41,7 +41,6 @@ public class Manutencao {
     private String oficina_nome;
 
     @NonNull
-    @Column(precision = 10, scale = 2)
     private Double valor;
 
     @NonNull

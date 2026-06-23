@@ -24,22 +24,22 @@ public class Viagem {
 
     @NonNull
     @ManyToOne
-    @JoinColumn(name = "veiculo_chassi")
+    @JoinColumn(name = "veiculo")
     private Veiculo veiculo;
 
     @NonNull
     @ManyToOne
-    @JoinColumn(name = "motorista_cpf")
+    @JoinColumn(name = "motorista")
     private Motorista motorista;
 
     @NonNull
     @ManyToOne
-    @JoinColumn(name = "origem_id")
+    @JoinColumn(name = "id_origem")
     private Cidades origem;
 
     @NonNull
     @ManyToOne
-    @JoinColumn(name = "destino_id")
+    @JoinColumn(name = "id_destino")
     private Cidades destino;
 
     @NonNull

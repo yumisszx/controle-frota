@@ -4,5 +4,5 @@ public enum GravidadeMulta {
     LEVE,
     MEDIA,
     GRAVE,
-    GRAVISSIVA
+    GRAVISSIMA
 }

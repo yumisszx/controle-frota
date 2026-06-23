@@ -21,7 +21,7 @@ public class Abastecimento {
 
     @NonNull
     @ManyToOne
-    @JoinColumn(name = "veiculo_chassi")
+    @JoinColumn(name = "veiculo")
     private Veiculo veiculo;
 
     @NonNull
@@ -32,12 +32,10 @@ public class Abastecimento {
     private TipoCombustivel tipo_combustivel;
 
     @NonNull
-    @Column(precision = 8, scale = 2)
     private Double quantidade_litros;
 
     @NonNull
-    @Column(precision = 10, scale = 2)
-    private Double valor;
+    private Double valor_litro;
 
     @NonNull
     private Integer km_veiculo;

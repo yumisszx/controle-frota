@@ -23,12 +23,12 @@ public class Multa {
 
     @NonNull
     @ManyToOne
-    @JoinColumn(name = "veiculo_chassi")
+    @JoinColumn(name = "veiculo")
     private Veiculo veiculo;
 
     @NonNull
     @ManyToOne
-    @JoinColumn(name = "motorista_cpf")
+    @JoinColumn(name = "motorista")
     private Motorista motorista;
 
     @NonNull
@@ -42,7 +42,6 @@ public class Multa {
     private GravidadeMulta gravidade;
 
     @NonNull
-    @Column(precision = 10, scale = 2)
     private Double valor;
 
     @NonNull
