@@ -38,4 +38,14 @@ public class Motorista {
 
     @NonNull
     private LocalDate validade_cnh;
+
+    public Motorista(MotoristaRequestDTO data){
+        this.CPF = data.CPF();
+        this.nome = data.nome();
+        this.dataNascimento = data.dataNascimento();
+        this.telefone = data.telefone();
+        this.CNH = data.CNH();
+        this.categoria = data.categoria();
+        this.validade_cnh = data.validade_cnh();
+    }
 }
