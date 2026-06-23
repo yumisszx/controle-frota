@@ -1,4 +1,4 @@
-package sistema.frota.cidades;
+package sistema.frota.entidades.cidades;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

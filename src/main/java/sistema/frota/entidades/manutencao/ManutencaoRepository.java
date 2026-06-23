@@ -1,4 +1,4 @@
-package sistema.frota.manutencao;
+package sistema.frota.entidades.manutencao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

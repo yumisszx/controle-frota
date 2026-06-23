@@ -1,4 +1,4 @@
-package sistema.frota.abastecimento;
+package sistema.frota.entidades.abastecimento;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

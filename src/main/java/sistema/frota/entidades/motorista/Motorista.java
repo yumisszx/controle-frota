@@ -1,4 +1,4 @@
-package sistema.frota.motorista;
+package sistema.frota.entidades.motorista;
 
 import jakarta.persistence.*;
 import lombok.*;

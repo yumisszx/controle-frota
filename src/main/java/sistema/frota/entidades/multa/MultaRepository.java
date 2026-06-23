@@ -1,4 +1,4 @@
-package sistema.frota.multa;
+package sistema.frota.entidades.multa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

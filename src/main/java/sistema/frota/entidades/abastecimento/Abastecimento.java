@@ -1,8 +1,8 @@
-package sistema.frota.abastecimento;
+package sistema.frota.entidades.abastecimento;
 
 import jakarta.persistence.*;
 import lombok.*;
-import sistema.frota.veiculo.Veiculo;
+import sistema.frota.entidades.veiculo.Veiculo;
 
 import java.time.LocalDate;
 

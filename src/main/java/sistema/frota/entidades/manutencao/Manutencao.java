@@ -1,11 +1,9 @@
-package sistema.frota.manutencao;
+package sistema.frota.entidades.manutencao;
 
 import jakarta.persistence.*;
 import lombok.*;
-import sistema.frota.motorista.CategoriaCNH;
-import sistema.frota.veiculo.Veiculo;
+import sistema.frota.entidades.veiculo.Veiculo;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Table(name = "manutencao")

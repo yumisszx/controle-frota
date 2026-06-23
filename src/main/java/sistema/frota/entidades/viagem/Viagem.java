@@ -1,10 +1,10 @@
-package sistema.frota.viagem;
+package sistema.frota.entidades.viagem;
 
 import jakarta.persistence.*;
 import lombok.*;
-import sistema.frota.cidades.Cidades;
-import sistema.frota.motorista.Motorista;
-import sistema.frota.veiculo.Veiculo;
+import sistema.frota.entidades.cidades.Cidades;
+import sistema.frota.entidades.motorista.Motorista;
+import sistema.frota.entidades.veiculo.Veiculo;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

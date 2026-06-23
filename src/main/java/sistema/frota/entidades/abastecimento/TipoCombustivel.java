@@ -1,4 +1,4 @@
-package sistema.frota.abastecimento;
+package sistema.frota.entidades.abastecimento;
 
 public enum TipoCombustivel {
     GASOLINA,

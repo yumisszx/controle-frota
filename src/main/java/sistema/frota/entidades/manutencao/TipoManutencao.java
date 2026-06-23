@@ -1,4 +1,4 @@
-package sistema.frota.manutencao;
+package sistema.frota.entidades.manutencao;
 
 public enum TipoManutencao {
     PREVENTIVA,

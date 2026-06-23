@@ -1,4 +1,4 @@
-package sistema.frota.cidades;
+package sistema.frota.entidades.cidades;
 
 import jakarta.persistence.*;
 import lombok.*;

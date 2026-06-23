@@ -1,4 +1,4 @@
-package sistema.frota.veiculo;
+package sistema.frota.entidades.veiculo;
 
 public enum TipoVeiculo {
     CARRO,

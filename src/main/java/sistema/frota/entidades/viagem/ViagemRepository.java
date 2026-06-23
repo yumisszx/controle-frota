@@ -1,4 +1,4 @@
-package sistema.frota.viagem;
+package sistema.frota.entidades.viagem;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

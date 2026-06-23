@@ -1,9 +1,9 @@
-package sistema.frota.multa;
+package sistema.frota.entidades.multa;
 
 import jakarta.persistence.*;
 import lombok.*;
-import sistema.frota.motorista.Motorista;
-import sistema.frota.veiculo.Veiculo;
+import sistema.frota.entidades.motorista.Motorista;
+import sistema.frota.entidades.veiculo.Veiculo;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
