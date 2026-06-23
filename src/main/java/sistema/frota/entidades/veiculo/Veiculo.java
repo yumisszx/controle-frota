@@ -44,5 +44,5 @@ public class Veiculo {
     private Integer km_atual;
 
     @NonNull
-    private double capacidade_carga;
+    private Double capacidade_carga;
 }
