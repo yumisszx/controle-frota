@@ -37,7 +37,6 @@ build/
 *.db
 application.properties
 application-dev.properties
-controle-frota/src/main/resources
 
 .env
 .env.*
