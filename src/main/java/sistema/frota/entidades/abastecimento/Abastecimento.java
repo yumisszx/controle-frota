@@ -39,4 +39,13 @@ public class Abastecimento {
 
     @NonNull
     private Integer km_veiculo;
+
+    public Abastecimento(AbastecimentoRequestDTO data, Veiculo veiculo){
+        this.veiculo = veiculo;
+        this.data = data.data();
+        this.tipo_combustivel = data.tipo_combustivel();
+        this.quantidade_litros = data.quantidade_litros();
+        this.valor_litro = data.valor_litro();
+        this.km_veiculo = data.km_veiculo();
+    }
 }

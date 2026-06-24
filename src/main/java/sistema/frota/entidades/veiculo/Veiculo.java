@@ -62,5 +62,4 @@ public class Veiculo {
     public void updateKm(VeiculoRequestDTO data){
         this.km_atual = data.km_atual();
     }
-
 }
