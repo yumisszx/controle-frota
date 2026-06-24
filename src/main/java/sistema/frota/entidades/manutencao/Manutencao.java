@@ -2,6 +2,7 @@ package sistema.frota.entidades.manutencao;
 
 import jakarta.persistence.*;
 import lombok.*;
+import sistema.frota.entidades.abastecimento.AbastecimentoRequestDTO;
 import sistema.frota.entidades.veiculo.Veiculo;
 
 import java.time.LocalDate;
@@ -43,4 +44,14 @@ public class Manutencao {
 
     @NonNull
     private Integer km_veiculo;
+
+    public Manutencao(ManutencaoRequestDTO data, Veiculo veiculo){
+        this.veiculo = veiculo;
+        this.data = data.data();
+        this.tipo = data.tipo();
+        this.descricao = data.descricao();
+        this.oficina_nome = data.oficina_nome();
+        this.valor = data.valor();
+        this.km_veiculo = data.km_veiculo();
+    }
 }
