@@ -24,7 +24,6 @@ public class Cidades {
     private String cidade;
 
     @NonNull
-    @Column(columnDefinition = "VARCHAR(2)")
     private String estado;
 
     @NonNull
