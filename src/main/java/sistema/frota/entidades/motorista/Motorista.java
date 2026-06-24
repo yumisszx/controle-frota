@@ -48,4 +48,10 @@ public class Motorista {
         this.categoria = data.categoria();
         this.validade_cnh = data.validade_cnh();
     }
+
+    public void updateDados(MotoristaRequestDTO data){
+        this.telefone = data.telefone();
+        this.categoria = data.categoria();
+        this.validade_cnh = data.validade_cnh();
+    }
 }

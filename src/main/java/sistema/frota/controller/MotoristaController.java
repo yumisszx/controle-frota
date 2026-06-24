@@ -25,7 +25,7 @@ public class MotoristaController {
         return "Motorista adicionado com sucesso";
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{CPF}")
     public String deleteMotorista(@PathVariable String CPF){
         repository.deleteById(CPF);
         return "Motorista removido com sucesso";
@@ -38,6 +38,13 @@ public class MotoristaController {
         return motoristaList;
     }
 
-    //@PutMapping("/{id}")
+    @PutMapping("/{CPF}")
+    public String updateMotorista(@PathVariable String CPF, @RequestBody MotoristaRequestDTO data){
+        Motorista motorista = repository.findById(CPF)
+                .orElseThrow(() -> new RuntimeException("Motorista não encontrado"));
 
+        motorista.updateDados(data);
+        repository.save(motorista);
+        return "Motorista atualizado com sucesso";
+    }
 }
