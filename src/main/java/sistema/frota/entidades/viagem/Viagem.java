@@ -45,12 +45,12 @@ public class Viagem {
     @NonNull
     private LocalDate data_saida;
 
-    private LocalDate data_chagada;
+    private LocalDate data_chegada;
 
     @NonNull
     private LocalTime hora_saida;
 
-    private LocalTime hora_chagada;
+    private LocalTime hora_chegada;
 
     @NonNull
     private Integer km_inicial;
@@ -60,4 +60,22 @@ public class Viagem {
     @NonNull
     @Enumerated(EnumType.STRING)
     private StatusViagem status;
+
+    public Viagem(ViagemRequestDTO data, Veiculo veiculo, Motorista motorista){
+        this.veiculo = veiculo;
+        this.motorista = motorista;
+        this.origem = origem;
+        this.destino = destino;
+        this.data_saida = data.data_saida();
+        this.hora_saida = data.hora_saida();
+        this.km_inicial = data.km_inicial();
+        this.status = data.status();
+    }
+
+    public void ViagemSave(ViagemRequestDTO data){
+        this.data_chegada = data.data_chegada();
+        this.hora_chegada = data.hora_chegada();
+        this.km_final = data.km_final();
+        this.status = data.status();
+    }
 }
