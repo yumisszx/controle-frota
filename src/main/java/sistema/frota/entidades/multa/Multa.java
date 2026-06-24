@@ -50,4 +50,15 @@ public class Multa {
     @NonNull
     @Enumerated(EnumType.STRING)
     private StatusMulta status;
+
+    public Multa (MultaRequestDTO data, Veiculo veiculo, Motorista motorista){
+        this.veiculo = veiculo;
+        this.motorista = motorista;
+        this.data = data.data();
+        this.hora = data.hora();
+        this.gravidade = data.gravidade();
+        this.valor = data.valor();
+        this.pontos_cnh = data.pontos_cnh();
+        this.status = data.status();
+    }
 }
