@@ -64,3 +64,18 @@ p{
         color: var(--color-text-1-hover);
     }
 }
+
+.nav-buttons{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.btn-primary{
+    background-color: var(--color-base-2);
+
+    &:hover{
+        background-color: var(--color-base-3);
+        color: var(--color-light-2);
+    }
+}
