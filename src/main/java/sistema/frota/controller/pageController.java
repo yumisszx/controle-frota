@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class pageController {
 
-    @GetMapping("/cadastroMotorista")
-    public String cadastroMotorista(){
-        return "cadastroMotorista";
+    @GetMapping("/home")
+    public String home(){
+        return "home";
     }
 }
