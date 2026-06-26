@@ -1,0 +1,66 @@
+:root{
+    --color-base-1: #93BCDC;
+    --color-base-2: #4B7CC0;
+    --color-base-3: #3A66B3;
+    --color-base-4: #224F8A;
+    --color-base-5: #FFF275;
+
+    --color-light-1: #efefed;
+    --color-light-2: #e6e5e4;
+
+    --color-text-1: #032744;
+    --color-text-1-hover: #104d80;
+    --color-text-2: #323230;
+    --color-text-2-hover: #4e4e49;
+
+    --color-secundary-1: #A31621;
+    --color-secundary-2: #B5D6B2;
+}
+
+body{
+    background-color: var(--color-light-1);
+}
+
+.navbar{
+    background-color: var(--color-light-2);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.main-home{
+    padding: 15px;
+}
+
+h1{
+    color: var(--color-text-1);
+}
+
+p{
+    color: var(--color-text-2);
+    margin-top: 1rem;
+}
+
+.nav-link{
+    color: var(--color-text-2);
+
+    &:hover{
+        color: var(--color-text-2-hover);
+    }
+}
+
+.dropdown-menu{
+    background-color: var(--color-light-2);
+}
+
+.dropdown-item{
+    color: var(--color-text-1);
+
+    &:hover{
+        color: var(--color-text-1-hover);
+    }
+}
