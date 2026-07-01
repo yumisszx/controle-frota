@@ -43,6 +43,7 @@ h1{
 p{
     color: var(--color-text-2);
     margin-top: 1rem;
+    font-size: 1.3rem;
 }
 
 .nav-link{
@@ -78,4 +79,27 @@ p{
         background-color: var(--color-base-3);
         color: var(--color-light-2);
     }
+}
+
+.bg-insercao{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+}
+
+.btn-submit{
+    padding: 1rem 2rem;
+
+    font-size: 1.2rem;
+}
+
+.obrigatorio{
+    color: var(--color-secundary-1);
 }
