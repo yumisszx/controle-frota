@@ -11,4 +11,9 @@ public class pageController {
     public String home(){
         return "home";
     }
+
+    @GetMapping("/atualizar")
+    public String atualizar() {
+        return "atualizar";
+    }
 }

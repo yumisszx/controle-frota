@@ -40,12 +40,4 @@ public class VeiculoController {
         repository.save(veiculo);
         return "Veiculo atualizado com sucesso";
     }
-
-    @GetMapping("/veiculo/tipoVeiculo")
-    public String tipoVeiculo(Model model){
-        model.addAttribute("veiculo", new Veiculo());
-        model.addAttribute("tipoVeiculo", TipoVeiculo.values());
-
-        return "veiculo";
-    }
 }

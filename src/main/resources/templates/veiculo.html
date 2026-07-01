@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/style/style.css">
+    <link rel="stylesheet" th:href="@{/style/style.css}">
     <title>Cadastro de veículo</title>
 </head>
 
@@ -23,10 +23,10 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                            <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="atualizar.html">Atualizar</a>
+                            <a class="nav-link" th:href="@{/atualizar}">Atualizar</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -34,13 +34,13 @@
                                 Inserir
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="veiculo.html">Veículo</a></li>
-                                <li><a class="dropdown-item" href="motorista.html">Motorista</a></li>
-                                <li><a class="dropdown-item" href="abastecimento.html">Abastecimento</a></li>
-                                <li><a class="dropdown-item" href="manutencao.html">Manutenção</a></li>
-                                <li><a class="dropdown-item" href="multa.html">Multa</a></li>
-                                <li><a class="dropdown-item" href="viagem.html">Abrir Viagem</a></li>
-                                <li><a class="dropdown-item" href="viagem.html">Fechar viagem</a></li>
+                                <li><a class="dropdown-item" th:href="@{/veiculo/cadastro-veiculo}">Veículo</a></li>
+                                <li><a class="dropdown-item" th:href="@{/motorista}">Motorista</a></li>
+                                <li><a class="dropdown-item" th:href="@{/abastecimento}">Abastecimento</a></li>
+                                <li><a class="dropdown-item" th:href="@{/manutencao}">Manutenção</a></li>
+                                <li><a class="dropdown-item" th:href="@{/multa}">Multa</a></li>
+                                <li><a class="dropdown-item" th:href="@{/viagem}">Abrir Viagem</a></li>
+                                <li><a class="dropdown-item" th:href="@{/viagem}">Fechar Viagem</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -51,7 +51,7 @@
 
     <main>
         <h1>Cadastro de Veículo</h1>
-        <div class="bg-insercao">
+        <form class="bg-insercao" th:object="${veiculo}" method="post">
             <p>Informe todos os dados abaixo</p>
             <div class="flex-row">
                 <section class="left">
@@ -60,21 +60,25 @@
                         <input type="text" class="form-control" id="formVeiculoChassi"
                             placeholder="Ex: 8BTCO51CR24052461">
                     </div>
+
                     <div class="mb-3">
                         <label for="formVeiculoRenavam" class="form-label">Renavam <span class="obrigatorio">*</span></label>
                         <input type="text" class="form-control" id="formVeiculoRenavam"
                             placeholder="012345678901">
                     </div>
+
                     <div class="mb-3">
                         <label for="formVeiculoPlaca" class="form-label">Placa <span class="obrigatorio">*</span></label>
                         <input type="text" class="form-control" id="formVeiculoPlaca"
                             placeholder="ABC1D23">
                     </div>
+
                     <div class="mb-3">
                         <label for="formVeiculoMarca" class="form-label">Marca <span class="obrigatorio">*</span></label>
                         <input type="text" class="form-control" id="formVeiculoMarca"
                             placeholder="Ex: Toyota">
                     </div>
+
                     <div class="mb-3">
                         <label for="formVeiculoModelo" class="form-label">Modelo <span class="obrigatorio">*</span></label>
                         <input type="text" class="form-control" id="formVeiculoModelo"
@@ -85,20 +89,25 @@
                     <label for="formVeiculoTipo" class="form-label">Selecione tipo do veículo <span class="obrigatorio">*</span></label>
                     <div class="input-group mb-3">
                         
-                        <select class="form-select" th:field="*{tipoVeiculo}" aria-label="Default select example">
-                            <option th:each="tipo : ${tipoVeiculo}" th:value="${tipo}" th:text="${tipo}"></option>
+                        
+                        <select id="formVeiculoTipo" class="form-select" th:field="*{tipo_veiculo}" aria-label="Default select example">
+                            <option value="" selected>Selecione</option>
+                            <option th:each="tipo : ${tiposVeiculo}" th:value="${tipo}" th:text="${tipo}"></option>
                         </select>
                     </div>
+                    
                     <div class="mb-3">
                         <label for="formVeiculoAno" class="form-label">Ano <span class="obrigatorio">*</span></label>
                         <input type="text" class="form-control" id="formVeiculoAno"
                             placeholder="Ex: 2022">
                     </div>
+                    
                     <div class="mb-3">
                         <label for="formVeiculoCarga" class="form-label">Capacidade de carga(kg) <span class="obrigatorio">*</span></label>
                         <input type="text" class="form-control" id="formVeiculoCarga"
                             placeholder="Ex: 14500">
                     </div>
+                    
                     <div class="mb-3">
                         <label for="formVeiculoKm" class="form-label">Km Atual do veículo <span class="obrigatorio">*</span></label>
                         <input type="text" class="form-control" id="formVeiculoKm"
@@ -107,7 +116,7 @@
                 </section>
             </div>
             <button class="btn btn-primary btn-submit" type="submit">Enviar</button>
-        </div>
+        </form>
 
     </main>
 
