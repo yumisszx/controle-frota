@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style/style.css">
+    <title>Cadastro de veículo</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="atualizar.html">Atualizar</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Inserir
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="veiculo.html">Veículo</a></li>
+                                <li><a class="dropdown-item" href="motorista.html">Motorista</a></li>
+                                <li><a class="dropdown-item" href="abastecimento.html">Abastecimento</a></li>
+                                <li><a class="dropdown-item" href="manutencao.html">Manutenção</a></li>
+                                <li><a class="dropdown-item" href="multa.html">Multa</a></li>
+                                <li><a class="dropdown-item" href="viagem.html">Abrir Viagem</a></li>
+                                <li><a class="dropdown-item" href="viagem.html">Fechar viagem</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Cadastro de Veículo</h1>
+        <div class="bg-insercao">
+            <p>Informe todos os dados abaixo</p>
+            <div class="flex-row">
+                <section class="left">
+                    <div class="mb-3">
+                        <label for="formVeiculoChassi" class="form-label">Chassi <span class="obrigatorio">*</span></label>
+                        <input type="text" class="form-control" id="formVeiculoChassi"
+                            placeholder="Ex: 8BTCO51CR24052461">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formVeiculoRenavam" class="form-label">Renavam <span class="obrigatorio">*</span></label>
+                        <input type="text" class="form-control" id="formVeiculoRenavam"
+                            placeholder="012345678901">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formVeiculoPlaca" class="form-label">Placa <span class="obrigatorio">*</span></label>
+                        <input type="text" class="form-control" id="formVeiculoPlaca"
+                            placeholder="ABC1D23">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formVeiculoMarca" class="form-label">Marca <span class="obrigatorio">*</span></label>
+                        <input type="text" class="form-control" id="formVeiculoMarca"
+                            placeholder="Ex: Toyota">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formVeiculoModelo" class="form-label">Modelo <span class="obrigatorio">*</span></label>
+                        <input type="text" class="form-control" id="formVeiculoModelo"
+                            placeholder="Ex: Corolla">
+                    </div>
+                </section>
+                <section class="right">
+                    <label for="formVeiculoTipo" class="form-label">Selecione tipo do veículo <span class="obrigatorio">*</span></label>
+                    <div class="input-group mb-3">
+                        
+                        <select class="form-select" th:field="*{tipoVeiculo}" aria-label="Default select example">
+                            <option th:each="tipo : ${tipoVeiculo}" th:value="${tipo}" th:text="${tipo}"></option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formVeiculoAno" class="form-label">Ano <span class="obrigatorio">*</span></label>
+                        <input type="text" class="form-control" id="formVeiculoAno"
+                            placeholder="Ex: 2022">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formVeiculoCarga" class="form-label">Capacidade de carga(kg) <span class="obrigatorio">*</span></label>
+                        <input type="text" class="form-control" id="formVeiculoCarga"
+                            placeholder="Ex: 14500">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formVeiculoKm" class="form-label">Km Atual do veículo <span class="obrigatorio">*</span></label>
+                        <input type="text" class="form-control" id="formVeiculoKm"
+                            placeholder="Ex: 60875">
+                    </div>
+                </section>
+            </div>
+            <button class="btn btn-primary btn-submit" type="submit">Enviar</button>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
