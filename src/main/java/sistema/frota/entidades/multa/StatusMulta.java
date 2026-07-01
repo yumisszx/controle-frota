@@ -1,6 +1,15 @@
 package sistema.frota.entidades.multa;
 
+import lombok.Getter;
+
+@Getter
 public enum StatusMulta {
-    PAGA,
-    RECORRIDA
+    PAGA("Paga"),
+    RECORRIDA("Recorrida");
+
+    private final String descricao;
+
+    StatusMulta(String descricao) {
+        this.descricao = descricao;
+    }
 }
