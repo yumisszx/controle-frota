@@ -1,10 +1,8 @@
 package sistema.frota.controller;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import sistema.frota.entidades.veiculo.Veiculo;
-import sistema.frota.entidades.veiculo.VeiculoRepository;
-import sistema.frota.entidades.veiculo.VeiculoRequestDTO;
-import sistema.frota.entidades.veiculo.VeiculoResponseDTO;
+import sistema.frota.entidades.veiculo.*;
 
 import java.util.List;
 
@@ -41,5 +39,13 @@ public class VeiculoController {
         veiculo.updateKm(data);
         repository.save(veiculo);
         return "Veiculo atualizado com sucesso";
+    }
+
+    @GetMapping("/veiculo/tipoVeiculo")
+    public String tipoVeiculo(Model model){
+        model.addAttribute("veiculo", new Veiculo());
+        model.addAttribute("tipoVeiculo", TipoVeiculo.values());
+
+        return "veiculo";
     }
 }
